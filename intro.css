@@ -1,0 +1,168 @@
+a{
+    background-color: transparent;
+    color: inherit;
+}
+
+body{
+    font-family: "Lato" , sans-serif;
+    font-size: 15px;
+    line-height: 1.5;
+}
+
+h2{
+    font-family: "Segoe UI" , Arial , sans-serif;
+    font-weight: 400;
+    font-size: 35px;
+    letter-spacing: 4px;
+}
+
+.top{
+    top: 0%;
+    left: 0%;
+    z-index: 1;
+    position: fixed;
+}
+
+.navbar{
+    display: flex;
+    width: 300%;
+}
+
+.black{
+    color: #ffffff!important;
+    background-color: #000000!important;
+}
+
+.button{
+    transition: all 200ms ease ;
+    text-decoration: none;
+    vertical-align: middle;
+}
+
+.button:hover{
+    color: #000000!important;
+    background-color: #ccc;
+}
+
+
+.shadow{
+    box-shadow:0 2px 5px 0 rgba(0,0,0,0.16),0 2px 10px 0 rgba(0,0,0,0.12);
+}
+
+.navbar-item{
+    float: left;
+    width: auto;
+    border: none;
+    display: block;
+    font-size: 20px;
+}
+
+.padding-large{
+    padding: 30px 60px!important;
+}
+
+.content{
+    max-width: 990px;
+    margin-top: 0px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.center{
+    text-align: center!important;
+}
+
+.articolo{
+    padding-top: 64px!important;
+    padding-bottom: 64px!important;
+}
+
+.justify{
+    text-align: justify!important;
+}
+
+.containerContatti{
+    padding-top: 20px!important;
+    padding-bottom: 20px!important;
+    display: flex;
+    justify-content: space-between;
+}
+
+
+.info{
+    display: flex;
+    flex-direction: column;
+    font-size: 18px;
+    margin-top: 40px;
+}
+
+.input{
+    display: flex;
+    flex-direction: column;
+}
+
+.textInput{
+    margin-right: 25px;
+    border: 1px solid #ccc;
+    padding-left: 10px;
+    padding-right: 15px;
+    height: 40px;
+}
+
+
+.displayNone{
+    display:  none;
+}
+
+.errorLabel{
+    color : red;
+    font-weight: bolder;
+}
+
+.successLabel{
+    color: blue;
+    font-weight: bolder;
+}
+
+.containerFlex{
+    display: flex;
+    margin-left: 620px;
+}
+
+.containerImmagine{
+    margin-top: 100px;
+    text-align: center;
+}
+
+#immagine{
+    width: 1500px;
+    height: 1000px;
+    object-fit: cover;
+}
+
+#testoIntroduzione{
+    font-size: 25px;
+}
+
+
+#scrittaNewsletter{
+    font-family: "Segoe UI" , Arial , sans-serif; 
+    font-weight: 500;
+    text-align: center;
+    font-size: large;
+}
+
+.riga1{
+    margin-bottom: 10px;
+}
+
+.riga2{
+    text-align: right;
+    margin-right: 25px;
+}
+
+.invioButton{
+    height: 50px;
+    width: 100px;
+}
+
