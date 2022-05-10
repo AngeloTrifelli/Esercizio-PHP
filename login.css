@@ -1,0 +1,113 @@
+*{
+    box-sizing: border-box;
+}
+
+
+body , html{
+    font-family: "Lato" , sans-serif;
+    font-size: 15px;
+    line-height: 1.5;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+
+.containerImmagine{
+    background-image: url("../festival.jpg");
+    
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    background-position: center;
+    height: 100%;    
+}
+
+.containerCentrale{
+    background-color: white;
+    text-align: center;
+
+    margin-left: 25%;
+    margin-right: 25%;
+
+    padding: 40px;
+    height: 350px;
+
+    border-top-left-radius: 70px;
+    border-top-right-radius: 70px;
+    border-bottom-left-radius: 70px;
+    border-bottom-right-radius: 70px;
+
+    display: flex;
+    flex-direction: column;
+}
+
+.riga{
+    margin-top: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding-left: 65px;
+}
+
+.containerBlur{
+    height: 100%;
+    width: 100%;
+    backdrop-filter: blur(5px);
+    padding-top: 10%;
+}
+
+.textInput{
+border: 1 px solid #ccc;
+padding-left: 10px;
+padding-right: 15px;
+height: 40px;
+width: 80%;
+}
+
+.bottone{
+
+    padding: 8px;
+    transition: all 1s ease;
+    cursor: pointer;
+    width: 80%;
+}
+
+.button{
+    padding: 12px 24px;
+    transition: all 200ms ease;
+    float: left;
+    text-decoration: none;
+    color: white; 
+    transition: all 200ms ease;
+}
+
+.button:hover{
+    background-color: #ccc;
+    color: black;
+}
+
+
+.container{
+    background-color: black;
+} 
+
+.flex-container{
+    display: flex;
+}
+
+#registrazione a{
+    text-decoration: none;
+    color: black;
+}
+
+#registrazione a:hover{
+    color: blue;
+}
+
+#registrazione{
+    margin-top: 30px;
+}
+
+.navbar{
+    position:static;
+}
