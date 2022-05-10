@@ -41,7 +41,7 @@ h2{
 
 .button:hover{
     color: #000000!important;
-    background-color: #ccc;
+    background-color: #ccc!important;
 }
 
 
@@ -164,5 +164,7 @@ h2{
 .invioButton{
     height: 50px;
     width: 100px;
+    border: 1px solid #ccc;
+    font-weight: 700;
+    cursor: pointer;
 }
-
