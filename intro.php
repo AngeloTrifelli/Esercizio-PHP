@@ -25,13 +25,17 @@
 
 
 
-<?xml version="1.0" encoding="UTF-8"?>
+
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
 
 <head>
     <title>Sapienza musical festival</title>
-    <link rel="stylesheet" href="../CSS/intro.css" type="text/css" />
+
+    <style>
+        <?php include "../CSS/intro.css" ?>
+    </style>
+    
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato" />
 </head>
 
@@ -44,7 +48,7 @@
             <a href="#" class="navbar-item padding-large button">BAND</a> 
             <a href="#contatti" class="navbar-item padding-large button">CONTATTI</a>
             <div class="containerFlex">
-                <a href="#" class="navbar-item padding-large button">REGISTRATI</a>
+                <a href="./registrazione.php" class="navbar-item padding-large button">REGISTRATI</a>
                 <a href="#" class="navbar-item padding-large button">LOGIN</a>
             </div>
         </div>
@@ -88,7 +92,7 @@
                             <input class="textInput" name="email" type="text" placeholder="Email"> 
                         </div>
                         <div class="riga2">
-                            <input class="black invioButton" name="invio" value="INVIA" type="submit" >
+                            <input class="black invioButton button" name="invio" value="INVIA" type="submit" >
                         </div>
                         <p class="<?php echo $classeErrore; ?>" >Dati mancanti! </p>
                         <p class="<?php echo $classeSuccesso; ?>" >Sei stato iscritto alla newsletter!</p>
