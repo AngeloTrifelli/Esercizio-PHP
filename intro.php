@@ -52,13 +52,14 @@
 
 <body>
     <div class="navbar black shadow">
-            <a href="#" class="navbar-item padding-large button">HOME</a> 
-            <a href="./band.php" class="navbar-item padding-large button">BAND</a> 
-            <a href="#contatti" class="navbar-item padding-large button">CONTATTI</a>
                 <?php 
                     if (isset($_SESSION['emailUtente']) && isset($_SESSION['passwordUtente'])){
                 ?>
-                    <a href="#" class="navbar-item padding-large button floatRight">IL TUO PROFILO</a>
+                    <a href="#" class="navbar-item padding-larger button">HOME</a> 
+                    <a href="./band.php" class="navbar-item padding-larger button">BAND</a> 
+                    <a href="#contatti" class="navbar-item padding-larger button">CONTATTI</a>
+
+                    <a href="#" class="navbar-item padding-larger button floatRight">IL TUO PROFILO</a>
                     <form action="<?php echo $_SERVER['PHP_SELF'];?>" method="POST">
                         <input type="submit" class="black navbar-item button logoutButton floatRight" name="logout" value="LOGOUT" />
                     </form>
@@ -66,6 +67,9 @@
                     }
                     else{
                 ?>
+                    <a href="#" class="navbar-item padding-large button">HOME</a> 
+                    <a href="./band.php" class="navbar-item padding-large button">BAND</a> 
+                    <a href="#contatti" class="navbar-item padding-large button">CONTATTI</a>
                     <a href="./login.php" class="navbar-item padding-large button floatRight">LOGIN</a>
                     <a href="./registrazione.php" class="navbar-item padding-large button floatRight">REGISTRATI</a>
                     
@@ -81,8 +85,8 @@
     <div class="content">
         <div class="articolo">
             <p  id=testoIntroduzione class="justify">
-                Ami il rock ? O forse preferisci la musica elettronica?
-                Il Sapienza Musical Festival fa al caso tuo ! Sapienza è lieta 
+                Ami il rock? O forse preferisci la musica elettronica?
+                Il Sapienza Musical Festival fa al caso tuo! Sapienza è lieta 
                 di presentare collaborazioni con artisti di ogni genere,
                 provenienti da ogni parte del mondo. Qui troverai sicuramente 
                 la band che fa al caso tuo. Esplora la lista degli artisti in programma
