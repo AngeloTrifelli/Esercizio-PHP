@@ -1,5 +1,41 @@
+<?php
+    require_once("connection.php");
 
-<?xml version="1.0" encoding="UTF-8"?>
+    $trovato = "True";
+
+    if (isset($_POST['accedi'])){
+        if ($_POST['email']!="" && $_POST['password']!=""){
+
+            $query = "SELECT * FROM utente WHERE email=\"{$_POST['email']}\" AND password=\"{$_POST['password']}\"";
+
+            if ($resultQ = mysqli_query($mysqliConnection, $query)){
+                $utente = mysqli_fetch_array($resultQ);
+                if($utente){
+                    $trovato = "True";
+
+                    session_start();
+                    $_SESSION['emailUtente']=$_POST['email'];
+                    $_SESSION['passwordUtente']=$_POST['password'];
+                    header("Location: intro.php");
+                    exit();
+                }
+                else{
+                    $trovato = "False";
+                }
+            }
+        }
+    }
+
+
+?>
+
+
+
+
+
+
+
+
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
 "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
@@ -42,20 +78,31 @@
                         }
                     ?>
                  
-                 <input class="textInput" type="password" name="password" placeholder="Inserisci la password" />
-                    <?php 
-                        if(isset($_POST['accedi']) && ($_POST['password']=="") && !( $_POST['email']=="")){
-                            echo "
-                                <p class=\"errorLabel\">Inserire la password!</p> 
-                            ";
-                        }
-                  ?>
+                    <input class="textInput" type="password" name="password" placeholder="Inserisci la password" />
+                        <?php 
+                            if(isset($_POST['accedi']) && ($_POST['password']=="") && !( $_POST['email']=="")){
+                                echo "
+                                    <p class=\"errorLabel\">Inserire la password!</p> 
+                                ";
+                            }
+                        ?>
 
                     <input class="bottone" type="submit" name="accedi" value="Accedi">
+
+                    <?php 
+                        if($trovato == "False"){
+                            echo "
+                                <p class=\"errorLabel\">Email e/o password errati!</p>
+                            ";
+                        }
+                    ?>
+
                 </div>
+
                 <div id="registrazione">
-                <a  href="./registrazione.php">Non sei ancora iscritto? Clicca qui!</a>
+                    <a  href="./registrazione.php">Non sei ancora iscritto? Clicca qui!</a>
                 </div>
+                
                 </form>
         </div>
 
