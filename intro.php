@@ -1,6 +1,8 @@
 <?php
     require_once("install.php");
 
+    session_start();
+
 
 
     $classeErrore = "displayNone";
