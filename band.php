@@ -7,7 +7,7 @@
     <style>
     <?php  include "../CSS/band.css"  ?>
     </style>
-    
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" />
     <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Montserrat&family=Poppins:ital,wght@1,200&family=Ubuntu:wght@500&display=swap" rel="stylesheet" />
@@ -20,11 +20,11 @@
 </head>
 
 <body>
-    <div class="top">
     <div class="navbar black shadow">
+    
           <a href="./intro.php" class="navbar-item padding-large button">HOME</a>
-                <a href="./registrazione.php" class="navbar-item padding-large button">REGISTRATI</a>
-                <a href="./login.php" class="navbar-item padding-large button loginButton">LOGIN</a></div>
+          <a href="./login.php" class="navbar-item padding-large button floatRight">LOGIN</a>
+          <a href="./registrazione.php" class="navbar-item padding-large button floatRight">REGISTRATI</a>
            
         </div>
 
