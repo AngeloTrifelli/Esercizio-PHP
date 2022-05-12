@@ -62,13 +62,11 @@
 
 
 <body>
-    <div class="top">
-        <div class="navbar black shadow">
+    <div class="navbar black shadow">
             <a href="./intro.php" class="navbar-item padding-large button">HOME</a> 
-            <a href="#" class="navbar-item padding-large button">BAND</a> 
-            <a href="#" id=loginButton class="navbar-item padding-large button">LOGIN</a>
+            <a href="./band.php" class="navbar-item padding-large button">BAND</a> 
+            <a href="./login.php"  class="navbar-item padding-large button floatRight">LOGIN</a>
      
-        </div>
     </div>
 
 
