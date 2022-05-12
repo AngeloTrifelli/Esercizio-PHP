@@ -16,6 +16,11 @@ body{
     padding: 2% 4%!important;
 }
 
+.padding-larger{
+    padding: 2.3% 4%!important;
+}
+
+
 .button{
     transition: all 200ms ease;
     float: left;
@@ -25,8 +30,8 @@ body{
 }
 
 .button:hover{
-    background-color: #ccc;
-    color: black;
+    background-color: #ccc!important;
+    color: black!important;
 }
 
 a:hover{
@@ -139,4 +144,10 @@ p{
 
 .floatRight{
     float: right;
+}
+
+.logoutButton{
+    font-size: 20px;
+    padding: 2.5% 5%;
+    cursor: pointer;
 }
