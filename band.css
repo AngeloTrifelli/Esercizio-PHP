@@ -5,6 +5,13 @@ a{
 
 }
 
+body{
+    font-family: "Lato" , sans-serif;
+    font-size: 15px;
+    line-height: 1.5;
+}
+
+
 .padding-large{
     padding: 2% 4%!important;
 }
@@ -103,17 +110,15 @@ p{
     font-style:oblique;
 }
 
-.top{
+.navbar{
     top: 0%;
     left: 0%;
     z-index: 1;
     position: fixed;
     width: 100%;
+    height: auto;
 }
 
-.navbar{
-    display: flex;
-}
 
 .black{
     color: #ffffff!important;
@@ -132,6 +137,6 @@ p{
     font-size: 20px;
 }
 
-.loginButton{
-    margin-left: 57%;
+.floatRight{
+    float: right;
 }
