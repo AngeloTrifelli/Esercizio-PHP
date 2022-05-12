@@ -3,8 +3,6 @@
 
     session_start();
 
-
-
     $classeErrore = "displayNone";
     $classeSuccesso = "displayNone";
     $emailErr = "displayNone";
@@ -24,6 +22,11 @@
 
             }
         }
+    }
+
+    if (isset($_POST['logout'])){
+        unset($_SESSION['emailUtente']);
+        unset($_SESSION['passwordUtente']);
     }
 ?>
 
@@ -48,16 +51,27 @@
 
 
 <body>
-    <div class="top">
-        <div class="navbar black shadow">
+    <div class="navbar black shadow">
             <a href="#" class="navbar-item padding-large button">HOME</a> 
-            <a href="#" class="navbar-item padding-large button">BAND</a> 
+            <a href="./band.php" class="navbar-item padding-large button">BAND</a> 
             <a href="#contatti" class="navbar-item padding-large button">CONTATTI</a>
-            <div class="containerFlex">
-                <a href="./registrazione.php" class="navbar-item padding-large button">REGISTRATI</a>
-                <a href="#" class="navbar-item padding-large button">LOGIN</a>
-            </div>
-        </div>
+                <?php 
+                    if (isset($_SESSION['emailUtente']) && isset($_SESSION['passwordUtente'])){
+                ?>
+                    <a href="#" class="navbar-item padding-large button floatRight">IL TUO PROFILO</a>
+                    <form action="<?php echo $_SERVER['PHP_SELF'];?>" method="POST">
+                        <input type="submit" class="black navbar-item button logoutButton floatRight" name="logout" value="LOGOUT" />
+                    </form>
+                <?php
+                    }
+                    else{
+                ?>
+                    <a href="./login.php" class="navbar-item padding-large button floatRight">LOGIN</a>
+                    <a href="./registrazione.php" class="navbar-item padding-large button floatRight">REGISTRATI</a>
+                    
+                <?php
+                    }
+                ?>
     </div>
 
     <div class="containerImmagine">
