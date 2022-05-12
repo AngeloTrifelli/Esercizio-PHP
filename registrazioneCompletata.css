@@ -39,50 +39,6 @@ h1{
     width: 100%;
 }
 
-.navbar{
-    display: flex;
-}
-
-.black{
-    color: #ffffff!important;
-    background-color: #000000!important;
-}
-
-.navbar-item{
-    float: left;
-    width: auto;
-    border: none;
-    display: block;
-    font-size: 20px;
-}
-
-.padding-large{
-    padding: 30px 60px!important;
-}
-
-.button{
-    transition: all 200ms ease ;
-    text-decoration: none;
-    vertical-align: middle;
-}
-
-.button:hover{
-    color: #000000!important;
-    background-color: #ccc!important;
-}
-
-#loginButton{
-    margin-left: 66.5%;
-}
-
-
-
-
-
-
-
-
-
 .containerImmagine{
     background-image: url("../festival.jpg");
     
@@ -114,15 +70,9 @@ h1{
 
     margin-left: 34%;
     margin-right: 35%;
+    min-height: 50%;
 
-    padding-top: 40px;
-    padding-bottom: 40px;
-    height: 250px;
-
-    border-top-left-radius: 70px;
-    border-top-right-radius: 70px;
-    border-bottom-left-radius: 70px;
-    border-bottom-right-radius: 70px;
+   border-radius: 70px;
 
     display: flex;
     flex-direction: column;
