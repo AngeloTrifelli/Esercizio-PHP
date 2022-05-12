@@ -1,6 +1,17 @@
 <?php
-    header( "refresh:5;url=intro.php" );
+    require_once("connection.php");
 
+
+    session_start();
+    if(!isset($_SESSION['email'])){        //Ora controllo questa variabile di sessione per verificare che l'utente sia arrivato in questa pagina passando per registrazioneFinale.php
+        header('Location: registrazione.php');
+        exit();
+    }
+    else{
+        unset($_SESSION);
+        session_destroy();
+        header( "refresh:5;url=login.php" );
+    }
 ?>
 
 
@@ -26,7 +37,6 @@
 
 <div class="top">
         <div class="navbar black shadow">
-            <a href="./registrazione.php" class="navbar-item padding-large button">TORNA INDIETRO</a> 
         </div>
 </div>
 
