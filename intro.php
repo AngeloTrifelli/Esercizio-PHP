@@ -1,4 +1,8 @@
 <?php
+    require_once("install.php");
+
+
+
     $classeErrore = "displayNone";
     $classeSuccesso = "displayNone";
     $emailErr = "displayNone";
