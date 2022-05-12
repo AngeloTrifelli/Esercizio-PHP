@@ -20,13 +20,14 @@
 </head>
 
 <body>
-       <div class="container flex-container">
-          <a href="./intro.php" class="button">HOME</a>
-          <div class="containerFlex">
+    <div class="top">
+    <div class="navbar black shadow">
+          <a href="./intro.php" class="navbar-item padding-large button">HOME</a>
                 <a href="./registrazione.php" class="navbar-item padding-large button">REGISTRATI</a>
-                <a href="./login.php" class="navbar-item padding-large button">LOGIN</a>
-            </div>
+                <a href="./login.php" class="navbar-item padding-large button loginButton">LOGIN</a></div>
+           
         </div>
+
         <div class="band paragraph">
             <h1>Pink Floyd</h1>
             <p>
@@ -47,7 +48,7 @@
             <table class="biglietto" align="center">
                 <tr>
                     <td class="data">26 Maggio 2022</td>
-                    <td class="basic">
+                    <td>
                         <br />
                         <span class="ticket"> BIGLIETTO BASIC 40&euro;</span>
                         <br />
@@ -56,7 +57,7 @@
                         <span class="posti">Posti disponibili:250</span>
     
                     </td>
-                    <td class="premium" >
+                    <td>
                         <br />
                         <span class="ticket">BIGLIETTO PREMIUM 70&euro;</span>
                         <br />
