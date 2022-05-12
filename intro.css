@@ -8,8 +8,8 @@ body{
     font-family: "Lato" , sans-serif;
     font-size: 15px;
     line-height: 1.5;
-    margin-left: 0%;
-    margin-right: 0%;
+    margin-left: 0;
+    margin-right: 0;
 }
 
 h2{
@@ -61,6 +61,10 @@ h2{
 
 .padding-large{
     padding: 2% 4%!important;
+}
+
+.padding-larger{
+    padding: 2.3% 4%!important;
 }
 
 .content{
@@ -129,7 +133,6 @@ h2{
 
 .containerImmagine{
     margin-top: 5.5%;
-   
 }
 
 #immagine{
