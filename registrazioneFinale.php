@@ -1,8 +1,56 @@
 <?php
-    if (isset($_POST['registrati'])){
+    require_once("./connection.php");
+    $emailErr = "False";
+
+    
+
+    session_start();
+   
+    
+
+    if (!isset($_POST['registrati'])){
+        if (!isset($_SESSION['accessoPermesso'])){     
+            header('Location: registrazione.php');
+        }
+        else{
+            unset($_SESSION['accessoPermesso']);       
+        }
+    }
+    else{    
         if($_POST['email']!="" && $_POST['password']!="" && $_POST['confermaPassword']!="" && $_POST['password']==$_POST['confermaPassword']){
-            header('Location: registrazioneCompletata.php');
-            exit();
+
+            $email = $_POST['email'];
+            $password = $_POST['password'];
+
+            if(!filter_var($email, FILTER_VALIDATE_EMAIL)){
+                $emailErr = "True";
+            }
+            else{
+                $_SESSION['email'] = $_POST['email'];   //Imposto questa variabile di sessione in modo tale da permettere di effettuare il controllo dentro registrazioneCompletata.php
+
+
+
+                $queryInsert = "INSERT INTO utente VALUES
+                ('{$_SESSION['nome']}' , '{$_SESSION['cognome']}' , '{$_SESSION['codFisc']}' , '{$_SESSION['dataNascita']}' , '{$_SESSION['domicilio']}' , '{$_SESSION['numCiv']}' , '$email' , '$password' );";
+
+    
+
+                try{
+                    if($resultQ = mysqli_query($mysqliConnection, $queryInsert)){
+                        //ok
+                    }
+                    else{
+                        printf("Problemi nell'inserire i dati nella tabella artisti\n");
+                        exit();
+                    }
+
+                }
+                catch(mysqli_sql_exception $exception){
+                }
+
+                header('Location: registrazioneCompletata.php');
+                exit();
+            } 
         }
     }
 ?>
@@ -60,6 +108,13 @@
                             echo "
                                 <p class=\"errorLabel\">Inserire l'email!</p> 
                             ";
+                        }
+                        else{
+                            if($emailErr=="True"){
+                                echo "
+                                    <p class=\"errorLabel\">Formato di email non valido!</p>
+                                ";
+                            }
                         }
                     ?>
                     <input class="textInput" type="password" name="password" placeholder="Inserisci la password" />
