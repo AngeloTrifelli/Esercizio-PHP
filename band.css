@@ -5,22 +5,21 @@ a{
 
 }
 
-.container{
-    background-color: black;
-} 
-
-.flex-container{
-    display: flex;
+.padding-large{
+    padding: 2% 4%!important;
 }
 
 .button{
-    padding: 12px 24px;
     transition: all 200ms ease;
     float: left;
+    text-decoration: none;
+    color: white; 
+    transition: all 200ms ease;
 }
 
 .button:hover{
     background-color: #ccc;
+    color: black;
 }
 
 a:hover{
@@ -28,7 +27,7 @@ a:hover{
 }
 
 .band{
-    padding: 16px 24px;
+    padding: 4% 8%;
 }
 
 h1{
@@ -52,13 +51,14 @@ p{
     margin-top: 2%;
     margin-left: 20%;
     margin-right: 20%;
-    margin-bottom: 56px;
 }
 
 .paragraph{
     background-color: #ccc;
     border-radius: 16px;
-    margin: 12px;
+    margin-left: 1%;
+    margin-top: 10%;
+    margin-bottom: 4%;
 }
 
 .biglietto{
@@ -100,5 +100,38 @@ p{
     font-size: 25px;
     font-family:sans-serif;
     font-weight: bolder;
-    font-style:oblique
+    font-style:oblique;
+}
+
+.top{
+    top: 0%;
+    left: 0%;
+    z-index: 1;
+    position: fixed;
+    width: 100%;
+}
+
+.navbar{
+    display: flex;
+}
+
+.black{
+    color: #ffffff!important;
+    background-color: #000000!important;
+}
+
+.shadow{
+    box-shadow:0 2px 5px 0 rgba(0,0,0,0.16),0 2px 10px 0 rgba(0,0,0,0.12);
+}
+
+.navbar-item{
+    float: left;
+    width: auto;
+    border: none;
+    display: block;
+    font-size: 20px;
+}
+
+.loginButton{
+    margin-left: 57%;
 }
