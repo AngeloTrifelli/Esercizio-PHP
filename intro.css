@@ -1,3 +1,4 @@
+
 a{
     background-color: transparent;
     color: inherit;
@@ -16,17 +17,16 @@ h2{
     letter-spacing: 4px;
 }
 
-.top{
+.navbar{
     top: 0%;
     left: 0%;
     z-index: 1;
     position: fixed;
+    width: 100%;
+    height: auto;
+    overflow: hidden;
 }
 
-.navbar{
-    display: flex;
-    width: 300%;
-}
 
 .black{
     color: #ffffff!important;
@@ -58,7 +58,7 @@ h2{
 }
 
 .padding-large{
-    padding: 30px 60px!important;
+    padding: 2% 4%!important;
 }
 
 .content{
@@ -124,10 +124,6 @@ h2{
     font-weight: bolder;
 }
 
-.containerFlex{
-    display: flex;
-    margin-left: 620px;
-}
 
 .containerImmagine{
     margin-top: 100px;
@@ -167,4 +163,15 @@ h2{
     border: 1px solid #ccc;
     font-weight: 700;
     cursor: pointer;
+}
+
+.logoutButton{
+    font-size: 20px;
+    padding: 2.5% 5%;
+    cursor: pointer;
+}
+
+
+.floatRight{
+    float: right;
 }
