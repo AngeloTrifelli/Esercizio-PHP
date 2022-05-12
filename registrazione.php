@@ -1,16 +1,40 @@
 <?php 
-    $patternCodFisc = "/^[a-zA-Z]{6}[0-9]{2}[a-zA-Z][0-9]{2}[a-zA-Z][0-9]{3}[a-zA-Z]$/";
+    require_once("connection.php");
+
+    $duplicato = "False";
+
+    $patternCodFisc = "/^[a-zA-Z]{6}[0-9]{2}[a-zA-Z][0-9]{2}[a-zA-Z][0-9]{3}[a-zA-Z]$/";        //Il codice fiscale viene considerato valido solamente se rispetta questo pattern
 
     if (isset($_POST['continua'])){
-        if ($_POST['cognome']==""){
+        if ($_POST['nome']!="" && $_POST['cognome']!=""  && $_POST['codFisc']!="" && $_POST['dataNascita']!="" && $_POST['domicilio']!="" && $_POST['numCiv']!=""){
+
+            if(preg_match($patternCodFisc, $_POST['codFisc'])){
+                
+                $query = "SELECT * FROM utente WHERE codFiscale = \"{$_POST['codFisc']}\"";     //Controllo se l'utente è gia presente nel database
+
+                if ($resultQ = mysqli_query($mysqliConnection,$query)){
+                    $utente = mysqli_fetch_array($resultQ);
+                    if ($utente){
+                        $duplicato = "True";
+                    }
+                    else{
+                        $duplicato = "False";
+
+                        session_start();
+                        $_SESSION['nome'] = $_POST['nome'];
+                        $_SESSION['cognome'] = $_POST['cognome'];
+                        $_SESSION['codFisc'] = $_POST['codFisc'];
+                        $_SESSION['dataNascita'] = $_POST['dataNascita'];
+                        $_SESSION['domicilio'] = $_POST['domicilio'];
+                        $_SESSION['numCiv'] = $_POST['numCiv'];
+                        $_SESSION['accessoPermesso'] = "True";
+                        header('Location: registrazioneFinale.php');
+                        exit();  
+                    }
+                }          
+            }
         }
-        else{
-            header('Location: registrazioneFinale.php');
-            exit();
-        }
-            
     }
-    
 ?>
 
 
@@ -169,6 +193,18 @@
                         <div class="riga">
                             <input type="submit" class="continuaButton black button" name="continua" value="Continua">
                         </div>
+
+                        <?php 
+                            if ($duplicato == "True"){
+                            echo "
+                                <div class\"riga\">
+                                <p class=\"errorLabel\">L'utente inserito è gia registrato!</p>
+                                </div>
+                            ";
+                            }
+                        ?>
+
+
                     </form>
 
                 </div>
@@ -195,3 +231,4 @@
 
 
 </html>
+
