@@ -30,22 +30,12 @@
     <style>
         <?php include "../CSS/registrazioneCompletata.css"   ?>
     </style>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
 </head>
 
 
 <body>
-
-<div class="top">
-        <div class="navbar black shadow">
-        </div>
-</div>
-
-
-
-
-
-
-
 
 <div class="containerImmagine"> 
 
@@ -53,7 +43,7 @@
 
     <div class="containerCentrale">
 
-        <h1>REGISTRAZIONE COMPLETATA</h1>
+        <h1>REGISTRAZIONE COMPLETATA <i class="fa-solid fa-check"></i></h1>
 
         <div class="tabella">
             <h3>Verrai reindirizzato alla pagina di Login tra 5 secondi...</h3>
