@@ -38,18 +38,17 @@
                 try{
                     if($resultQ = mysqli_query($mysqliConnection, $queryInsert)){
                         //ok
+                        header('Location: registrazioneCompletata.php');
+                        exit();
                     }
                     else{
-                        printf("Problemi nell'inserire i dati nella tabella artisti\n");
+                        printf("Problemi nell'inserire i dati nella tabella utente\n");
                         exit();
                     }
 
                 }
                 catch(mysqli_sql_exception $exception){
                 }
-
-                header('Location: registrazioneCompletata.php');
-                exit();
             } 
         }
     }
