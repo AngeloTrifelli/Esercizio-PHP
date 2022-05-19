@@ -26,6 +26,20 @@ else{
     exit();
 }
 
+$CreaTabellaNewsLetter = "CREATE TABLE IF NOT EXISTS abbonato(
+    nome varchar(100) not null,
+    email varchar(100) primary key
+);";
+
+
+if($resultQ = mysqli_query($mysqliConnection, $CreaTabellaNewsLetter)){
+//ok
+}
+else{
+printf("Impossibile creare la tabella abbonati\n");
+exit();
+}
+
 
 
 
@@ -35,6 +49,8 @@ $CreaTabellaArtisti = "CREATE TABLE IF NOT EXISTS artista(
         descrizione varchar(2000) not null,
         dataOraConcerto timestamp not null
     );";
+
+
 
 
 if($resultQ = mysqli_query($mysqliConnection, $CreaTabellaArtisti)){
