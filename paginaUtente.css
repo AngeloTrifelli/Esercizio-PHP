@@ -68,14 +68,14 @@ h1{
     width: 80%;
     height: auto;
     margin-left: 10%;
-    flex-direction:column;
+
 }
 
 .firstTitle{
     margin-left: 38%;
-    padding-top: 5%;
+    padding-top: 2%;
     font-size: 32px;
-    margin-top: -25%;
+
 }
 
 .secondTitle{
@@ -90,12 +90,6 @@ ul{
 
 li{
     font-size: 24px;
-}
-
-.icon-person
-{
-    font-size: 150px;
-    margin-left: 2%;
 }
 
 .biglietto{
