@@ -43,13 +43,9 @@
         </div>
 </div>
 
-         <h1>Ciao Simone! <i class="fa-solid fa-hand"></i></h1>
+         <h1>Ciao  <?php echo $utente['nome']; ?> <i class="fa-solid fa-hand"></i></h1>
          
          <div class="mainItem">
-         <div class="icon-person">
-         <i class="fa-solid fa-chalkboard-user"></i>
-        </div>
-
             <div>
 
             <h3 class="firstTitle">IL TUO PROFILO:</h3>
