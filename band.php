@@ -64,7 +64,7 @@
                 if(isset($_SESSION['emailUtente']) && isset($_SESSION['passwordUtente']) ){
             ?>
                 <a href="./intro.php" class="navbar-item padding-larger button">HOME</a>
-                <a href="#" class="navbar-item padding-larger button floatRight">IL TUO PROFILO</a>
+                <a href="./paginaUtente.php" class="navbar-item padding-larger button floatRight">IL TUO PROFILO</a>
                 <form action="<?php echo $_SERVER['PHP_SELF'];?>" method="POST">
                     <input type="submit" class="black navbar-item button logoutButton floatRight" name="logout" value="LOGOUT" />
                 </form>
