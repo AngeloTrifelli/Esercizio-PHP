@@ -13,12 +13,28 @@
         }
         else{
             $email = $_POST["email"];
+            $nome = $_POST["nome"];
             if (!filter_var($email, FILTER_VALIDATE_EMAIL)) {
                 $emailErr = "errorLabel";
             }
             else{
                 $classeErrore = "displayNone";
-                $classeSuccesso = "successLabel";
+               
+                $queryInsert = "INSERT INTO abbonato VALUES
+                ('$nome' , '$email');";
+    
+                try{
+                    if($resultQ = mysqli_query($mysqliConnection, $queryInsert)){
+                        $classeSuccesso = "successLabel";
+                    }
+                    else{
+                        printf("Problemi nell'inserire i dati nella tabella abbonati\n");
+                        exit();
+                    }
+
+                }
+                catch(mysqli_sql_exception $exception){
+                }
 
             }
         }
@@ -59,7 +75,7 @@
                     <a href="./band.php" class="navbar-item padding-larger button">BAND</a> 
                     <a href="#contatti" class="navbar-item padding-larger button">CONTATTI</a>
 
-                    <a href="#" class="navbar-item padding-larger button floatRight">IL TUO PROFILO</a>
+                    <a href="./paginaUtente.php" class="navbar-item padding-larger button floatRight">IL TUO PROFILO</a>
                     <form action="<?php echo $_SERVER['PHP_SELF'];?>" method="POST">
                         <input type="submit" class="black navbar-item button logoutButton floatRight" name="logout" value="LOGOUT" />
                     </form>
