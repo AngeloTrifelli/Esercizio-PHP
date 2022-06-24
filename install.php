@@ -195,7 +195,27 @@ try{
 catch(mysqli_sql_exception $exception){
 }
 
+$InserimentoDatiUtente ="INSERT INTO utente  VALUES
+('Giovanni', 'Rossi', 'RSSGNN64R03E472G', '1964-10-03', 'del quasimodo', 13, 'giovanni.rossi64@gmail.com', 'Giovanni64'),
+('Roberto', 'Verdi', 'VRDRRT00L13E472M', '2000-07-13', 'della stazione', 112, 'roberto.verdi00@gmail.com', 'Roberto00'),
+('Carlo', 'Bianchi', 'BNCCRL01P23E472A', '2001-09-23', 'del pinneto' , 4, 'carlo.bianchi01@gmail.com', 'Carlo01'),
+('Simone', 'Petronio', 'PTRSMN98M04E472E', '1998-08-04', 'della bonura', 27, 'simone.petronio98@gmail.com', 'Simone98'),
+('Federica', 'Rubberti', 'RBBFRC89L43E472O', '1989-07-03', 'dante', 43 , 'federica.rubberti89@gmail.com', 'Federica89'),
+('Eleonora', 'Giacomini', 'GCMLNR75M70E472A', '1975-08-30', 'ariosto', 3, 'eleonora.giacomini75@gmail.com', 'Eleonora75'),
+('Filippo', 'Midulla', 'MDLFPP96B26E472N', '1996-02-26', 'isonzo' , 78, 'filippo.midulla96@gmail.com', 'Filippo96'),
+('Giacomo', 'Scapin', 'SCPGCM00S05E472N', '2000-11-05', 'carpineti', 256, 'giacomo.scapin00@gmail.com', 'Giacomo00');";
+try{
+    if($resultQ = mysqli_query($mysqliConnection, $InserimentoDatiUtente)){
+        //ok
+    }
+    else{
+        printf("Problemi nell'inserire i dati nella tabella utenti\n");
+        exit();
+    }
 
+}
+catch(mysqli_sql_exception $exception){
+}
 
 
 ?>
